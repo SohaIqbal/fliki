@@ -1,1 +1,1 @@
-A project management tool named - fliki
+ fliki's frontend
