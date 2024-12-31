@@ -14,14 +14,20 @@ export default {
         poppinsRegular: ['poppins-regular', 'sans-serif'],
         poppinsSemiBold: ['poppins-semibold', 'sans-serif'],
         poppinsThin: ['poppins-thin', 'sans-serif'],
+        robotoBold: ['roboto-bold', 'sans-serif'],
+        robotoLight: ['roboto-light', 'sans-serif'],
+        robotoMedium: ['roboto-medium', 'sans-serif'],
+        robotoRegular: ['roboto-regular', 'sans-serif'],
+        robotoThin: ['roboto-thin', 'sans-serif']
       
 
       },
       colors: {
-        // primary: '',
-        // secondary: '',
-        // background: '',
-        // text: '',
+        primarybg: '#FFFFFF',
+        secondary: '',
+        background: '',
+        text: '',
+        heading:'#1E1E1E'
       },
   }},
   plugins: [],

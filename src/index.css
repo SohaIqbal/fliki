@@ -40,4 +40,28 @@
         src: url('/fonts/Poppins-Thin.woff2') format('woff2');
         
       }
+      @font-face {
+        font-family: 'roboto-bold';
+        src: url('/fonts/Roboto-Bold.woff2') format('woff2');
+      }
+      
+      @font-face {
+        font-family: 'roboto-light';
+        src: url('/fonts/Roboto-Light.woff2') format('woff2');
+      }
+      
+      @font-face {
+        font-family: 'roboto-medium';
+        src: url('/fonts/Roboto-Medium.woff2') format('woff2');
+      }
+      
+      @font-face {
+        font-family: 'roboto-regular';
+        src: url('/fonts/Roboto-Regular.woff2') format('woff2');
+      }
+      
+      @font-face {
+        font-family: 'roboto-thin';
+        src: url('/fonts/Roboto-Thin.woff2') format('woff2');
+      }
 }
