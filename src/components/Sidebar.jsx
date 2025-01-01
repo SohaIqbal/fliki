@@ -39,9 +39,9 @@ useEffect(() => {
   };
 
   const sidebarItems = [
-    { name: "Home", icon:<GoHome  className="text-secondary text-[.9vw]"/> },
-    { name: "Projects", icon: <GrProjects className="text-secondary text-[.7vw]"/>},
-    { name: "Chat", icon: <PiChatCircleLight className="text-secondary text-[.vw]"/> },
+    { name: "Home", icon:<GoHome  className="text-secondary text-[1vw]"/> },
+    { name: "Projects", icon: <GrProjects className="text-secondary text-[.8vw]"/>},
+    { name: "Chat", icon: <PiChatCircleLight className="text-secondary text-[1vw]"/> },
     { name: "More", icon: "⋮" },
   ];
 
@@ -57,7 +57,7 @@ useEffect(() => {
   ];
 
   return (
-    <div className="w-[13vw]  mt-[3.6vw] text-2xl h-full  text-black font-robotoLight  p-4 fixed ">
+    <div className="w-[13vw] mt-[5.6vw] text-2xl h-full  text-black font-robotoLight  p-4 fixed ">
       <ul className='ml-6 '>
         {sidebarItems.slice(0, 3).map((item, index) => (
           <li
@@ -100,9 +100,10 @@ useEffect(() => {
          </div>
         </button>
         {isOpen && (
-  <div className=" mt-2 border-black shadow-[0_0_10px_rgba(0,0,0,0.5)]   bg-primarybg z-100 text-black p-2 rounded-md absolute">
+  <div className=" ml-4 mt-2 w-[11.5vw]  bg-pink-500  border-black shadow-[0_0_10px_rgba(0,0,0,0.5)]   bg-primarybg  text-black p-2 rounded-md ">
     {moreOptions.map((option, index) => (
-      <div className="flex  items-center text-secondary " key={index}>
+     
+        <div className="flex bg-green-400   items-center text-secondary " key={index}>
         <button
           className="flex items-center w-full p-2 hover:bg-gray-200 hover:transition-all ease-in-out duration-[.2s] font-robotoLight rounded-md"
         >
@@ -128,6 +129,7 @@ useEffect(() => {
           </div>
         </button>
       </div>
+     
     ))}
   </div>
 )} 
