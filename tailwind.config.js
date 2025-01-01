@@ -23,11 +23,11 @@ export default {
 
       },
       colors: {
-        primarybg: '#FFFFFF',
-        secondary: '',
+        primarybg: '#ffffff',
+        secondary: '#003d48',
         background: '',
         text: '',
-        heading:'#1E1E1E'
+        heading:''
       },
   }},
   plugins: [],
