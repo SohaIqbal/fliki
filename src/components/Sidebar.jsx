@@ -1,6 +1,6 @@
 import React, { useState ,useRef, useEffect} from "react";
 import { Icons } from "../icons";
-const { MdOutlinePushPin, MdPushPin, GoHome, GrProjects, PiChatCircleLight, CiViewTimeline, FaRegPenToSquare, IoMdList, CiCalendar, GoChecklist,HiOutlineDocumentReport,MdDashboardCustomize, MdAddTask  } = Icons;
+const { MdOutlinePushPin, MdPushPin,IoIosMore, IoMdHome, IoMdMore,GrProjects, IoChatbubbleSharp, MdViewTimeline, FaRegPenToSquare, IoMdList, IoCalendarClear, GoChecklist,HiDocumentReport,MdDashboardCustomize, MdAddTask  } = Icons;
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [extraItems, setExtraItems] = useState([]);
@@ -39,30 +39,30 @@ useEffect(() => {
   };
 
   const sidebarItems = [
-    { name: "Home", icon:<GoHome  className="text-secondary text-[1vw]"/> },
+    { name: "Home", icon:<IoMdHome  className="text-secondary text-[1vw]"/> },
     { name: "Projects", icon: <GrProjects className="text-secondary text-[.8vw]"/>},
-    { name: "Chat", icon: <PiChatCircleLight className="text-secondary text-[1vw]"/> },
+    { name: "Chat", icon: <IoChatbubbleSharp className="text-secondary text-[1vw]"/> },
     { name: "More", icon: "⋮" },
   ];
 
   const moreOptions = [
-    { name: "Timeline", icon: <CiViewTimeline className="text-secondary text-[1vw]"/> },
+    { name: "Timeline", icon: <MdViewTimeline className="text-secondary text-[1vw]"/> },
     { name: "Board", icon: <FaRegPenToSquare className="text-secondary text-[.8vw]"/> },
     { name: "Backlog", icon: <MdAddTask className="text-secondary text-[1vw]"/> },
     { name: "Sprint", icon: <IoMdList className="text-secondarytext-[1vw]"/> },
-    { name: "Calender", icon: <CiCalendar className="text-secondary-600 text-[1vw]"/> },
+    { name: "Calender", icon: <IoCalendarClear className="text-secondary-600 text-[1vw]"/> },
     { name: "Lists", icon: <GoChecklist className="text-secondary text-[1vw]"/> },
-    { name: "Reports", icon: <HiOutlineDocumentReport className="text-secondary text-[1vw]"/> },
+    { name: "Reports", icon: <HiDocumentReport className="text-secondary text-[1vw]"/> },
     { name: "Dashboards", icon: <MdDashboardCustomize className="text-secondary text-[1vw]"/> },
   ];
 
   return (
-    <div className="w-[13vw] mt-[5.6vw] text-2xl h-full  text-black font-robotoLight  p-4 fixed ">
-      <ul className='ml-6 '>
+    <div className="w-[13.5vw]  mt-[2.7vw] text-[1vw] h-full  text-black font-robotoLight  p-2 fixed ">
+      <ul className='ml-2'>
         {sidebarItems.slice(0, 3).map((item, index) => (
           <li
             key={index}
-            className="flex items-center text-secondary justify-start mb-3  p-3 hover:bg-gray-200 hover:transition-all ease-in-out duration-[.2s] rounded-md cursor-pointer"
+            className="flex items-center w-[10.7vw] h-[2.3vw] text-secondary justify-start  p-3 hover:bg-gray-200 hover:transition-all ease-in-out duration-[.2s] rounded-md cursor-pointer"
           >
             <div >
               {item.icon}
@@ -76,12 +76,12 @@ useEffect(() => {
         {extraItems.map((item, index) => (
           <li
             key={index}
-            className="flex items-center p-3 mb-3 text-secondary  hover:bg-gray-200 rounded-md cursor-pointer"
+            className="flex items-center p-3 h-[2.3vw] w-[10.7vw] text-left  text-secondary  hover:bg-gray-200 rounded-md cursor-pointer"
           >
             <div className="text-[1vw]">
               {item.icon}
             </div>
-            <div className="px-4 mr-[5vw] ">
+            <div className="px-5 mr-[5vw] ">
               {item.name}
             </div>
           </li>
@@ -92,27 +92,27 @@ useEffect(() => {
       <div ref={dropdownref} className="relative">
         <button
           onClick={toggleDropdown}
-          className="flex items-center p-4 ml-5 hover:bg-gray-200 rounded-md cursor-pointer w-[11.1vw] h-[2vw]"
+          className="flex items-center p-4 ml-2 hover:bg-gray-200 rounded-md cursor-pointer w-[10.7vw] h-[2vw]"
         >
-         <div className="flex gap-4 w-full text-secondary">
-         <span className="ml-1 mr-4 text-[.9vw] text-secondary">{sidebarItems[3].icon}</span>
-         {sidebarItems[3].name}
+         <div className="flex gap-2  text-secondary ">
+         <span className=" mr-[1.3vw] mt-[.15vw] text-[.9vw] text-secondary">{sidebarItems[3].icon}</span>
+       <span>  {sidebarItems[3].name}</span>
          </div>
         </button>
         {isOpen && (
-  <div className=" ml-4 mt-2 w-[11.5vw]  bg-pink-500  border-black shadow-[0_0_10px_rgba(0,0,0,0.5)]   bg-primarybg  text-black p-2 rounded-md ">
+  <div className=" ml- mt-2 w-[12vw]   border-black shadow-[0_0_10px_rgba(0,0,0,0.5)]   bg-primarybg  text-black p-2 rounded-md ">
     {moreOptions.map((option, index) => (
      
-        <div className="flex bg-green-400   items-center text-secondary " key={index}>
+        <div className="flex h-[2.2vw]  items-center text-secondary " key={index}>
         <button
           className="flex items-center w-full p-2 hover:bg-gray-200 hover:transition-all ease-in-out duration-[.2s] font-robotoLight rounded-md"
         >
           <div className="flex items-center w-full">
         
-            <span className="mr-3">{option.icon}</span>
+            <span className="mr-2">{option.icon}</span>
             
            
-            <div className="flex items-center text-left px-3 w-full">
+            <div className="flex items-center text-left  w-full">
               <span className=" flex-1">{option.name}</span>
               <div  onClick={(e) => {
     e.stopPropagation(); 
