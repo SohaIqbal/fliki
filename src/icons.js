@@ -18,7 +18,7 @@ import { GoBell } from "react-icons/go";
 import { CiCircleQuestion } from "react-icons/ci";
 import { FaCircle } from "react-icons/fa";
 import { IoMdMore } from "react-icons/io";
-
+import { IoFlagOutline } from "react-icons/io5";
 export const Icons = {
   MdOutlinePushPin,
   IoMdMore,
@@ -39,5 +39,6 @@ export const Icons = {
     IoAddOutline,
     GoBell,
     CiCircleQuestion,
-    FaCircle
+    FaCircle,
+    IoFlagOutline
 };

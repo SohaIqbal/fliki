@@ -7,10 +7,11 @@ function Base() {
     
   }
   return (
-    <div className='  ml-[14vw] mt-2  w-[85%] relative rounded-[10px] border-[1px] border-gray-300 h-screen overflow-y-auto overflow-x-hidden' >
-      <div className=' w-full h-full rounded-[10px] text-7xl'>
+    <div className='  ml-[14vw] mt-[.5vw]   w-[85%] relative rounded-[10px] border-[1px] border-gray-300 h-screen overflow-x-hidden    ' >
+      <div className=' w-full h-full  rounded-[10px] text-7xl'>
+        
 
-        <div className='w-full mb-3  h-[35px]  rounded-t-[30px] border-b-[1px]  border-gray-300 bg-white'>
+        <div className='w-full shadow-md mb-3 h-[50px] sticky top-0 rounded-t-[30px]  border-b-[1px] z-30 bg-white  border-gray-300 '>
         
         
         </div>
@@ -20,9 +21,9 @@ function Base() {
         item2={'ToDo'}
         item3={'Done'}
         />
-        <div className='w-[85vw] h-[41vh]  rounded-[30px] flex  '>
+        <div className='w-[85vw] h-[50vh] rounded-[30px] flex  '>
           <BigCard 
-          container={'h-[43vh] ' }
+          container={'h-[46vh] ' }
           items = {["Newly Assigned", "ToDo", "Done"]}
           title={'Upcoming Events'}
           item1={'Meetings'}
@@ -30,7 +31,7 @@ function Base() {
           item3={'Reminders'}
           />
           <SmallCard
-          container={'w-[30vw] mr-7 h-[16.8vw]  ' }
+          container={'w-[30vw] mr-[4vw]' }
           title={'Assigned Comments'}
          
           />

@@ -1,53 +1,149 @@
-// import React from 'react'
 
-// function BigCard(props) {
-// const [activeTab, setActiveTab] = useState(0); // 0 for h1, 1 for h2, 2 for h3
-
-//   const handleTabClick = (index) => {
-//     setActiveTab(index);
-//   };
-
-//   return (
-//     <div className={`w-[98%] h-[45%] m-2 rounded-[10px] border-[1px] border-gray-300 overflow-hidden  ${props.container}`}>
-//         <div className='w-full bg-purple-300  h-full rounded-[10px] '>
-
-//             <p className='font-poppinsSemiBold px-10 py-2 rounded-t-[10px] bg-pink-400 text-[1.3vw]'>{props.title}</p>
-           
-//            <div className='w-full h-[80%] text-left text-[1.1vw] font-bold leading-snug mt-4   flex flex-1'>
-
-//            <div className='w-[33.33%] border-r-[1px] overflow-y-auto border-gray-200 ml-10   '> 
-//             <h1 className=' font-poppinsLight text-gray-600 mb-5 z-300'>{props.h1}</h1>
-//             <p className='mt-5 font-robotoLight'>
-                
-//             </p>
-//             </div>
-
-//            <div className='w-[33.33%] border-r-[1px] overflow-y-auto border-gray-200 ml-10  '> 
-//            <h1 className=' mb-5 z-300 font-poppinsLight text-gray-600 '>{props.h2}</h1>
-//            <p className='mt-5'>
-//             lorem100
-//            </p>
-//            </div>
-//            <div className='w-[33.33%] ml-10 overflow-y-auto '>
-//            <h1 className=' mb-5 z-300 font-poppinsLight text-gray-600 '>{props.h3}</h1>
-//            <p className='mt-5'> 
-//             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, velit. Ullam nisi minima omnis quaerat vel officia? Molestiae dicta aperiam quo modi iure maxime error laudantium nostrum vero. Nemo corrupti, ducimus laborum veniam itaque nam et aperiam iste rerum atque fugit fugiat quis sit dolore esse necessitatibus optio ad impedit incidunt, accusamus magnam doloremque tempore libero officiis? Nihil beatae officiis corrupti distinctio praesentium quos recusandae facilis asperiores dolore repellat voluptas sunt in, vitae natus, vero, atque ab doloremque? Quasi, necessitatibus possimus? Laboriosam error fugiat est quaerat culpa, aperiam non itaque vero sapiente. Sit, nam atque hic enim fugiat cupiditate placeat!
-//            </p>
-//              </div>
-            
-//             </div>
-          
-//         </div>
-     
-//     </div>
-//   )
-// }
-
-// export default BigCard
 import React, { useState } from 'react';
+import { Icons } from '../icons';
+const { FaCircle, IoFlagOutline } = Icons;
+const tabs = [
+  {
+    id: 0,
+    content: (
+      <div className='w-full h-full text-[1vw]  flex flex-col gap-1 overflow-hidden'>
+        {/* //first main div   */}
+        <div className=' w-full cursor-pointer hover:bg-gray-200 transition-all ease-in-out duration-[.2s] p-1 flex gap-2'>
+          <div className=' flex-1 h-full p-1 '>
+            <div className='w-full h-full  flex gap-2 '>
+              <div className='inline-flex text-[1vw] mt-[.2vw]  '><FaCircle/></div>
+              <div className='inline-flex '>
+                <p>Logo Design</p>
+              </div>
+
+            </div>
+          </div>
+          <div className=' flex-1  p-1'> 
+          <div className='w-full h-full text-wrap flex gap-[.1vw]'>
+              <div className='inline-flex '> In Project</div>
+              <div className='inline-flex  justify-center items-center '>/</div>
+
+              <div className='flex-1 '>Urge Fragrances</div>
+
+            </div>
+
+          </div>
+          <div className='flex-1 h-full p-1'>
+          <div className='w-full h-full  flex gap-4'>
+              <div className='inline-flex  justify-center items-center '><IoFlagOutline className='text-red-600'/></div>
+              <div className='inline-flex  justify-center items-center '>Critical</div>
+
+            </div>
+          </div>
+          <div className=' flex-1 h-full p-1'>
+          <div className='w-full h-full  flex gap-3'>
+              <div className='inline-flex  justify-center items-center '>12 Jan</div>
+              <div className='inline-flex  justify-center items-center '>,</div>
+
+              <div className='inline-flex  justify-center items-center '>9:32 pm</div>
+
+            </div>
+          </div>
+        </div>
+
+          {/* //Second main div  */}
+        <div className=' w-full  cursor-pointer hover:bg-gray-200 transition-all ease-in-out duration-[.2s] p-1 flex gap-1'>
+          <div className=' flex-1 h-full p-1 '>
+            <div className='w-full h-full  flex gap-2 '>
+              <div className='inline-flex text-[1vw] mt-[.2vw]  '><FaCircle/></div>
+              <div className='inline-flex '>
+                <p>Logo Design</p>
+              </div>
+
+            </div>
+          </div>
+          <div className=' flex-1  p-1'> 
+          <div className='w-full h-full  flex'>
+              <div className='inline-flex '> In Project</div>
+              <div className='inline-flex  justify-center items-center '>/</div>
+
+              <div className='flex-1 '>Urge Fragrances</div>
+
+            </div>
+
+          </div>
+          <div className=' flex-1 h-full p-1'>
+          <div className='w-full h-full  flex gap-4'>
+              <div className='inline-flex  justify-center items-center '><IoFlagOutline className='text-red-600'/></div>
+              <div className='inline-flex  justify-center items-center '>Critical</div>
+
+            </div>
+          </div>
+          <div className=' flex-1 h-full p-1'>
+          <div className='w-full h-full  flex gap-3'>
+              <div className='inline-flex  justify-center items-center '>12 Jan</div>
+              <div className='inline-flex  justify-center items-center '>,</div>
+
+              <div className='inline-flex  justify-center items-center '>9:32 pm</div>
+
+            </div>
+          </div>
+        </div>
+
+          {/* //Third main div   */}
+        <div className='w-full  cursor-pointer hover:bg-gray-200 transition-all ease-in-out duration-[.2s] p-1 flex gap-1'>
+          <div className=' flex-1 h-full p-1 '>
+            <div className='w-full h-full  flex gap-2 '>
+              <div className='inline-flex text-[1vw] mt-[.2vw]  '><FaCircle/></div>
+              <div className='inline-flex '>
+                <p>Logo Design</p>
+              </div>
+
+            </div>
+          </div>
+          <div className=' flex-1 h-full p-1'> 
+          <div className='w-full h-full  flex'>
+              <div className='inline-flex '> In Project</div>
+              <div className='inline-flex  justify-center items-center '>/</div>
+
+              <div className='flex-1 '>Urge Fragrances</div>
+
+            </div>
+
+          </div>
+          <div className=' flex-1 h-full p-1'>
+          <div className='w-full h-full  flex gap-4'>
+              <div className='inline-flex  justify-center items-center '><IoFlagOutline className='text-red-600'/></div>
+              <div className='inline-flex  justify-center items-center '>Critical</div>
+
+            </div>
+          </div>
+          <div className=' flex-1 h-full p-1'>
+          <div className='w-full h-full  flex gap-3'>
+              <div className='inline-flex  justify-center items-center '>12 Jan</div>
+              <div className='inline-flex  justify-center items-center '>,</div>
+
+              <div className='inline-flex  justify-center items-center '>9:32 pm</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
+    id: 1,
+    content: (<div className='w-full h-full bg-pink-300'>
+    
+    </div>),
+  },
+  {
+    id: 2,
+    content: (
+      <div>
+        <p>Data for tab </p>
+      </div>
+    ),
+  },
+];
 
 function BigCard(props) {
-  const [activeTab, setActiveTab] = useState(0); // 0 for h1, 1 for h2, 2 for h3
+  const [activeTab, setActiveTab] = useState(0); 
 
   const handleTabClick = (index) => {
     setActiveTab(index);
@@ -56,7 +152,7 @@ function BigCard(props) {
 
   return (
     <div
-      className={`w-[98%] h-[45%] m-2 rounded-[10px] border-[1px] border-gray-300 overflow-hidden ${props.container}`}
+      className={`w-[98%] h-[45%] m-2 rounded-[10px] border-[1px] border-gray-300 relative   ${props.container}`}
     >
       <div className="w-full  h-full rounded-[10px]">
         {/* Tabs */}
@@ -75,40 +171,13 @@ function BigCard(props) {
         </div>
 
         {/* Content */}
-        <div className="w-full h-[80%] text-left text-[1.1vw] font-bold leading-snug mt-4 overflow-y-auto p-4">
-          {activeTab === 0 && (
-            <div>
-              {/* <h1 className="font-poppinsLight text-gray-600 mb-5">
-                {props.h1}
-              </h1> */}
-              <p>
-                data for tab 1
-                 
-              </p>
-            </div>
-          )}
-          {activeTab === 1 && (
-            <div>
-              {/* <h1 className="font-poppinsLight text-gray-600 mb-5">
-                {props.h2}
-              </h1> */}
-              <p>
-              data for tab 2
-              
-              </p>
-            </div>
-          )}
-          {activeTab === 2 && (
-            <div>
-              {/* <h1 className="font-poppinsLight text-gray-600 mb-5">
-                {props.h3}
-              </h1> */}
-              <p>
-              data for tab 3
-                
-              </p>
-            </div>
-          )}
+        <div className="w-full h-[90%] text-left text-[1.1vw] font-bold leading-snug  p-2">
+        
+           {tabs
+      .filter(tab => tab.id === activeTab) 
+      .map(tab => (
+        <div key={tab.id}>{tab.content}</div>
+      ))}
         </div>
       </div>
     </div>
